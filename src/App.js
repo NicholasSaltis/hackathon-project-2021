@@ -24,7 +24,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
         </Switch>
 
-        <h2>Ahmet Branch</h2>
+        <h2>Nick's Branch</h2>
       </div>
     </Router>
   );
