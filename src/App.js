@@ -1,17 +1,11 @@
-import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import About from './components/About'
-import Home from './components/Home'
-
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import About from './components/About';
+import Home from './components/Home';
 
 const App = () => {
   return (
-<Router>
+    <Router>
       <div>
         <nav>
           <ul>
@@ -28,9 +22,11 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route exact path="/" component={Home} />
         </Switch>
+
+        <h2>Ahmet Branch</h2>
       </div>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
