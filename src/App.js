@@ -6,7 +6,6 @@ import Home from './components/Home';
 const App = () => {
   return (
     <Router>
-      <h1>Mike's change</h1>
       <div>
         <nav>
           <ul>
@@ -24,7 +23,6 @@ const App = () => {
           <Route exact path="/" component={Home} />
         </Switch>
 
-        <h2>Nick's Branch</h2>
       </div>
     </Router>
   );
