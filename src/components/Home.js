@@ -20,9 +20,21 @@ const Home = () => {
     setAstronauts(response.data.people);
   };
 
+  const getEventByLatLong = () => {
+    const api_key = process.env.REACT_APP_TICKET_MASTER;
+
+    fetch(
+      `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${api_key}&latlong=${latitude},${longitude}`
+    )
+      .then((response) => response.json)
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  };
+
   useEffect(() => {
     issPosition();
     getAstronauts();
+    getEventByLatLong();
   }, []);
 
   const renderedAstronauts = astronauts.map((astro) => {
